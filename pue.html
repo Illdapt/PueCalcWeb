@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script type='text/javascript' src='http://42u.com/scripts/numeral1.js'></script>
+    <script type='text/javascript' src='pueCalc.js'></script>
+</head>
+<body>
+<div style="padding-top: 50px;"></div>
+<div class="container">
+    <div class="row pueCalculator">
+<div class="">
+    <div class="col-md-12 image-center">
+        <h1 class="calcTitle">PUE &amp; DCiE Calculator</h1>
+        Calculate your PUE (Power Usage Effectiveness) &amp; DCiE and start bench-marking the efficiency within your data center.
+        <hr>
+    </div>
+    <div class="col-md-6 image-center" style="padding-left: 5%;">
+        <div id="topleftpue">
+            <p class="inputLabel" style="margin-top: 0;">Enter Total IT Load</p>
+
+            <div class="input-group"><input id="totalIt" class="pueOption form-control" title="This value represents total kW of all IT equipment. This value is typically gathered at the UPS level." size="10" type="text" placeholder="Example: 2000" />
+                <div class="input-group-addon addonColor">
+                    <div>
+                        <strong>kW</strong>
+                    </div>
+                </div>
+            </div>
+            <p class="inputLabel">Enter Total Facility Load</p>
+
+            <div class="input-group"><input id="totalFac" class="pueOption form-control" title="This value represents total kW for your entire facility. This value is typically gathered at the Transformer level." size="10" type="text" placeholder="Example: 4000" />
+                <div class="input-group-addon addonColor">
+                    <div>
+                        <strong>kW</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <p class="inputLabel">Select Country</p>
+                <select class="pueOption form-control" id="countrySelect"></select>
+            </div>
+            <div class="col-md-4">
+                <p class="inputLabel">Select State</p>
+                <select class="pueOption form-control" id="stateSelect"></select>
+            </div>
+            <div class="col-md-4">
+                <p class="inputLabel">kW/h Cost</p>
+
+                <div class="input-group">
+                    <div class="input-group-addon addonColor">
+                        <div id="currencyKW">
+                            <strong>$</strong>
+                        </div>
+                    </div>
+                    <input id="kwCost" class="pueOption form-control" title="You can override this value with your actual cost/kW." size="10" type="text" placeholder="Your cost per kW/h" />
+
+                </div>
+            </div>
+            <div class="results col-md-12">
+                <div class="progress pueGradient">
+                    <div id="pueBack" style="position: absolute; right: 0px; width: 100%;">
+                        <div class="progressbar" style="background-color: #f5f5f5;"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Current PUE :</h2>
+                    <h2 id="pue">---</h2>
+                </div>
+                <div class="col-md-6">
+                    <h2>Current DCiE :</h2>
+                    <h2 id="dcie">---</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pueTable col-md-6 image-center"><img class="size-full wp-image-5231" src="http://www.42u.com/wp-content/uploads/pueEfficiencyDiagram.png" alt="PUE Efficiency Diagram" width="400"/></div>
+    <div class="cir-divider-double divNoMargin" style="padding: 0 5%;"></div>
+    <div class="infoTable clear col-md-12 image-center">
+        <div class="infoTableCol1 col-md-4">
+            <div class="cir-mediabox3 mboxPue " style="max-width: 500px;">
+                <div><img class="size-thumbnail wp-image-5244 icon1" src="http://www.42u.com/wp-content/uploads/electricityicon-150x150.png" alt="electricityicon" width="150" height="150" /></div>
+                <h3 class="addonColor">Annual Power Use</h3>
+                <h2 id="elecTotal" class="mediaBoxResult">---</h2>
+            </div>
+        </div>
+        <div class="infoTableCol2 col-md-4 image-center">
+            <div class="cir-mediabox3 mboxPue" style="max-width: 500px;">
+                <div><img class="size-thumbnail wp-image-5246" src="http://www.42u.com/wp-content/uploads/moneyicon-150x150.png" alt="moneyicon" width="150" height="150" /></div>
+                <h3 class="addonColor">Annual Power Cost</h3>
+                <h2 id="moneyTotal" class="mediaBoxResult">---</h2>
+            </div>
+        </div>
+        <div class="infoTableCol3 col-md-4 image-center">
+            <div class="cir-mediabox3 mboxPue" style="max-width: 500px;">
+                <div><img class="size-thumbnail wp-image-5245" src="http://www.42u.com/wp-content/uploads/emissionicon-150x150.png" alt="emissionicon" width="150" height="150" /></div>
+                <h3 class="addonColor">Annual Carbon Footprint</h3>
+                <h2 id="emissionTotal" class="mediaBoxResult">---</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 image-center lastTotal">
+
+        <hr />
+
+        <b>Now that we have a benchmark of your current efficiency level, let's go ahead and calculate <a href="http://www.42u.com/efficiency/energy-efficiency-calculator.htm">potential savings</a> if you were to improve this metric.</b>
+
+    </div>
+</div>
+        </div>
+    </div>
+</body>
+</html>

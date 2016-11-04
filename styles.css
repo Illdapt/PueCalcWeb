@@ -1,0 +1,293 @@
+html {
+    height:100%
+}
+body * {
+    -ms-word-wrap:break-word;
+    word-wrap:break-word;
+}
+body {
+    font-family:'Open Sans',HelveticaNeue,'Helvetica Neue',arial,Helvetica,sans-serif;
+    font-size:100%;
+    line-height:1.65;
+    background-color:#444;
+    color:#656565
+}
+h1 {
+    font-size:1.875em;
+    line-height:1
+}
+h2 {
+    font-size:1.688em;
+    line-height:1
+}
+h3 {
+    font-size:1.5em;
+    line-height:1;
+    margin-bottom: 0;
+}
+h4 {
+    font-size:1.375em;
+    line-height:1
+}
+h5 {
+    font-size:1.25em;
+    line-height:1
+}
+h6 {
+    font-size:1em;
+    line-height:1
+}
+p {
+    font-size: 1.2em;
+}
+b,strong {
+    font-weight:700
+}
+.container {
+    margin-right:auto;
+    margin-left:auto;
+    padding-left:25px;
+    padding-right:25px
+}
+.row {
+    margin-left:-25px;
+    margin-right:-25px
+}
+.progress {
+    height:30px;
+    position:relative;
+    background-color:#f5f5f5;
+    -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow:inset 0 1px 2px rgba(0,0,0,.1);
+    border-radius: 0 0 4px 4px;
+}
+.progress div {
+    display:block;
+    height:100%;
+    text-align:center
+}
+.cir-mediabox3 h3 {
+    color:#fff;
+    margin:0;
+    padding:.25em;
+    font-size:1.25em
+}
+
+/* Styles for PUE Calculator */
+.pueCalculator{
+    background-color: #f5f5f5;
+    border-radius: 25px;
+}
+.col-md-6-1p {
+    width: 49%;
+}
+.results{
+    overflow: hidden;
+    padding-top: 20px;
+}
+.pueCalculator h4{
+    padding: 10px 0;
+}
+.pueGradient{
+    background: url("http://lib.store.yahoo.net/lib/kvm-switch/red-yellow-green.png") repeat-y ;
+    background-size: 100% auto;
+    margin-top: 0;
+}
+.infoTable{
+    background-color: #f5f5f5;
+}
+.mboxPue{
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.divNoMargin{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#topleftpue{
+    padding: 2% 2% 0;
+}
+.addonColor{
+    color: #ffffff!important;
+    background-color: #284f79 !important;
+    border-radius: 5px 5px 0 0;
+}
+.addonColor h3{
+    color: #f09942 !important;
+    background-color: #284f79 !important;
+}
+.mediaBoxResult{
+    background-color: #ffffff !important;
+    height: 100%;
+    line-height: 2 !important;
+    border-radius: 0 0 5px 5px;
+}
+
+/* End Styles for PUE Calculator */
+/* Styles for EFF Calculator */
+.effCalculator{
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.mediaBoxResult p{
+    text-decoration: underline;
+    margin-top: 0;
+    padding-top: 6px;
+}
+.calcTitle {
+    padding-top: 3%;
+}
+.lastTotal {
+    padding-bottom: 10px;
+}
+.topPad6{
+    padding-top: 6px;
+}
+.noOverflow {
+    overflow: hidden;
+}
+.inputLabel{
+    text-align: left;
+}
+.noMarginBottom {
+    margin-bottom: 0;
+}
+.resultChange{
+    transition: color 0.6s ease;
+}
+/* END Styles for EFF Calculator */
+
+.image-center {text-align:center;font-weight:bold;margin-bottom:20px}
+.image-left {float:left;text-align:center;font-weight:bold;margin-bottom:20px}
+.image-right {float:right;text-align:center;font-weight:bold;margin-bottom:20px;margin-left:10px}
+
+.form-control {
+    display:block;
+    width:100%;
+    height:34px;
+    padding:6px 12px;
+    font-size:14px;
+    line-height:1.428571429;
+    color:#656565;
+    background-color:#fff;
+    background-image:none;
+    border:1px solid #e2e5e7;
+    border-radius:4px;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+.input-group .form-control,.input-group-addon,.input-group-btn {
+    display:table-cell
+}
+.input-group .form-control:not(:first-child):not(:last-child),.input-group-addon:not(:first-child):not(:last-child),.input-group-btn:not(:first-child):not(:last-child) {
+    border-radius:0
+}
+.input-group-addon,.input-group-btn {
+    width:1%;
+    white-space:nowrap;
+    vertical-align:middle
+}
+.input-group-addon {
+    padding:6px 12px;
+    font-size:14px;
+    font-weight:400;
+    line-height:1;
+    color:#555;
+    text-align:center;
+    background-color:#eee;
+    border:1px solid #e2e5e7;
+    border-radius:4px
+}
+.input-group-addon input[type=checkbox],.input-group-addon input[type=radio] {
+    margin-top:0
+}
+.input-group .form-control:first-child,.input-group-addon:first-child,.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group>.btn,.input-group-btn:last-child>.btn-group:not(:last-child)>.btn {
+    border-bottom-right-radius:0;
+    border-top-right-radius:0
+}
+.input-group-addon:first-child {
+    border-right:0
+}
+.input-group .form-control:last-child,.input-group-addon:last-child,.input-group-btn:first-child>.btn-group:not(:first-child)>.btn,.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group>.btn .input-group-btn:first-child>.btn:not(:first-child) {
+    border-bottom-left-radius:0;
+    border-top-left-radius:0
+}
+.input-group-addon:last-child {
+    border-left:0
+}
+.input-group p {
+    margin:0;
+    padding:0
+}
+.input-group {
+    position:relative;
+    display:table;
+    border-collapse:separate
+}
+.input-group[class*=col-] {
+    float:none;
+    padding-left:0;
+    padding-right:0
+}
+.input-group .form-control {
+    float:left;
+    width:100%;
+    margin-bottom:0
+}
+
+.input-group-btn {
+    position:relative;
+    font-size:0;
+    white-space:nowrap
+}
+.input-group-btn>.btn {
+    position:relative
+}
+.input-group-btn>.btn+.btn {
+    margin-left:-1px
+}
+.input-group-btn>.btn:active,.input-group-btn>.btn:focus,.input-group-btn>.btn:hover {
+    z-index:2
+}
+.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group {
+    margin-right:-1px
+}
+.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group {
+    margin-left:-1px
+}
+.cir-divider-dotline,.cir-divider-double,.cir-divider-shadow,.cir-divider-space,.cir-divider-top,hr {
+    margin:2em 0;
+    height:0;
+    clear:both
+}
+.cir-divider-double {
+    height:4px;
+    border-top:1px solid #e2e5e7;
+    border-bottom:1px solid #e2e5e7
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
